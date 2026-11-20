@@ -1,0 +1,52 @@
+{
+  "name": "native-craft-lens",
+  "displayName": "Native Craft Lens",
+  "description": "Restores the craft and familiarity feeling when AI writes code in unfamiliar languages. Dual-view Native Lens + Craft Agent prompts.",
+  "version": "0.1.0",
+  "publisher": "jpetro416",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "AI",
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "nativeCraft.explainInNative",
+        "title": "Native Craft: Explain Selection in Native Language"
+      },
+      {
+        "command": "nativeCraft.openNativeLens",
+        "title": "Native Craft: Open Native Lens Panel"
+      },
+      {
+        "command": "nativeCraft.craftSuggestion",
+        "title": "Native Craft: Suggest Craft Improvements"
+      }
+    ],
+    "configuration": {
+      "title": "Native Craft Lens",
+      "properties": {
+        "nativeCraft.preferredLanguage": {
+          "type": "string",
+          "default": "C#",
+          "description": "Your native programming language for mental-model mapping (e.g. C#, TypeScript, Go)."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.90.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  }
+}
