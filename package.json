@@ -1,8 +1,8 @@
 {
   "name": "native-craft-lens",
   "displayName": "Native Craft Lens",
-  "description": "Restores the craft and familiarity feeling when AI writes code in unfamiliar languages. Dual-view Native Lens + Craft Agent prompts.",
-  "version": "0.1.0",
+  "description": "Restores the craft and familiarity feeling when AI writes code in unfamiliar languages. Dual-view Native Lens + Craft Agent + gamification.",
+  "version": "0.2.0",
   "publisher": "jpetro416",
   "engines": {
     "vscode": "^1.90.0"
@@ -21,11 +21,19 @@
       },
       {
         "command": "nativeCraft.openNativeLens",
-        "title": "Native Craft: Open Native Lens Panel"
+        "title": "Native Craft: Open Native Lens Dashboard"
       },
       {
         "command": "nativeCraft.craftSuggestion",
         "title": "Native Craft: Suggest Craft Improvements"
+      },
+      {
+        "command": "nativeCraft.showProgress",
+        "title": "Native Craft: Show Craft Progress"
+      },
+      {
+        "command": "nativeCraft.dailyChallenge",
+        "title": "Native Craft: Start Daily Craft Challenge"
       }
     ],
     "configuration": {
@@ -35,6 +43,11 @@
           "type": "string",
           "default": "C#",
           "description": "Your native programming language for mental-model mapping (e.g. C#, TypeScript, Go)."
+        },
+        "nativeCraft.enableGamification": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable craft points, levels, streaks, and achievements."
         }
       }
     }
